@@ -1,7 +1,9 @@
-- name: Hello World Sample
+---
+- name: Michael's sample
   hosts: all
+  vars:
+    THING: "World"
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
-
+        msg: "Hello, {{ THING }}"
